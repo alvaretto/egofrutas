@@ -3,8 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EgoFrutas del Bosque — Recupera tu Bienestar Digestivo</title>
-  <meta name="description" content="EgoFrutas del Bosque de OmniLife: apoyo nutricional con extracto de regaliz, vitaminas B y antioxidantes de frutos del bosque para tu bienestar digestivo.">
+  <!-- SEO -->
+  <title>EgoFrutas del Bosque OmniLife — Bienestar Digestivo Natural</title>
+  <meta name="description" content="EgoFrutas del Bosque de OmniLife: apoyo digestivo con extracto de regaliz, vitaminas B y antioxidantes de frutos del bosque. Pide el tuyo por WhatsApp.">
+  <meta name="keywords" content="EgoFrutas, OmniLife, bienestar digestivo, frutos del bosque, suplemento nutricional, regaliz, vitaminas B, antioxidantes">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="OmniLife — Álvaro Ángel Molina">
+  <meta name="theme-color" content="#047857">
+  <link rel="canonical" href="https://alvaretto.github.io/egofrutas/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EgoFrutas del Bosque — Recupera tu bienestar digestivo">
+  <meta property="og:description" content="Apoyo nutricional con extracto de regaliz, vitaminas B y antioxidantes de frutos del bosque. Distribuidor autorizado OmniLife.">
+  <meta property="og:image" content="https://cdn.omnilife.com/public/uploads/images/products/detail/mex/es_new/4850500/4850500.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="Lata de EgoFrutas del Bosque OmniLife — suplemento nutricional de frutos del bosque">
+  <meta property="og:url" content="https://alvaretto.github.io/egofrutas/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="EgoFrutas del Bosque — OmniLife">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EgoFrutas del Bosque — Recupera tu bienestar digestivo">
+  <meta name="twitter:description" content="Apoyo nutricional con extracto de regaliz, vitaminas B y antioxidantes de frutos del bosque.">
+  <meta name="twitter:image" content="https://cdn.omnilife.com/public/uploads/images/products/detail/mex/es_new/4850500/4850500.png">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -49,20 +73,25 @@
     }
   </script>
 
-  <!-- Fonts -->
+  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.omnilife.com">
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
   <style>
+    /* ── Base ── */
     body {
       font-family: 'Outfit', sans-serif;
       background: #FFFBF5;
       overflow-x: hidden;
     }
+
+    /* ── Grain texture overlay ── */
     body::before {
       content: '';
       position: fixed;
@@ -72,6 +101,8 @@
       opacity: 0.025;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
+
+    /* ── Scroll-triggered animations ── */
     .reveal {
       opacity: 0;
       transform: translateY(32px);
@@ -86,9 +117,15 @@
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── Hero entrance ── */
     @keyframes heroFadeUp {
       from { opacity: 0; transform: translateY(40px); }
       to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroPulse {
+      0%, 100% { opacity: 0.6; }
+      50%      { opacity: 1; }
     }
     .hero-animate {
       animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -98,13 +135,25 @@
     .hero-delay-2 { animation-delay: 0.4s; }
     .hero-delay-3 { animation-delay: 0.6s; }
     .hero-delay-4 { animation-delay: 0.8s; }
+
+    /* ── Floating WhatsApp button ── */
     @keyframes floatBounce {
       0%, 100% { transform: translateY(0); }
       50%      { transform: translateY(-6px); }
     }
-    .wa-float { animation: floatBounce 3s ease-in-out infinite; }
-    .blob { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-    .blob-alt { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    .wa-float {
+      animation: floatBounce 3s ease-in-out infinite;
+    }
+
+    /* ── Organic blob shapes ── */
+    .blob {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    .blob-alt {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    /* ── Card hover effects ── */
     .card-lift {
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
                   box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -113,6 +162,8 @@
       transform: translateY(-4px);
       box-shadow: 0 20px 40px -12px rgba(109, 40, 217, 0.15);
     }
+
+    /* ── Quiz transitions ── */
     .quiz-step {
       display: none;
       opacity: 0;
@@ -124,13 +175,25 @@
       opacity: 1;
       transform: translateX(0);
     }
-    .progress-fill { transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+
+    /* ── Progress bar ── */
+    .progress-fill {
+      transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ── Liver flow connector ── */
     .flow-connector {
       width: 2px;
       background: linear-gradient(to bottom, #8B5CF6, #10B981);
     }
+
+    /* ── Star rating ── */
     .star-filled { color: #F59E0B; }
-    .gradient-border { position: relative; }
+
+    /* ── Smooth gradient border ── */
+    .gradient-border {
+      position: relative;
+    }
     .gradient-border::before {
       content: '';
       position: absolute;
@@ -143,15 +206,29 @@
       -webkit-mask-composite: xor;
       mask-composite: exclude;
     }
-    .quiz-option { transition: all 0.3s ease; }
-    .quiz-option:hover { transform: scale(1.02); }
-    .quiz-option:active { transform: scale(0.98); }
+
+    /* ── Quiz option buttons ── */
+    .quiz-option {
+      transition: all 0.3s ease;
+    }
+    .quiz-option:hover {
+      transform: scale(1.02);
+    }
+    .quiz-option:active {
+      transform: scale(0.98);
+    }
+
+    /* ── Scroll indicator ── */
     @keyframes scrollDown {
       0%   { opacity: 0; transform: translateY(-8px); }
       50%  { opacity: 1; }
       100% { opacity: 0; transform: translateY(8px); }
     }
-    .scroll-indicator { animation: scrollDown 2s ease-in-out infinite; }
+    .scroll-indicator {
+      animation: scrollDown 2s ease-in-out infinite;
+    }
+
+    /* ── Product cans ── */
     @keyframes canFloat1 {
       0%, 100% { transform: translateY(0) rotate(-6deg); }
       50%      { transform: translateY(-14px) rotate(-6deg); }
@@ -159,6 +236,12 @@
     @keyframes canFloat2 {
       0%, 100% { transform: translateY(0) rotate(8deg); }
       50%      { transform: translateY(-10px) rotate(8deg); }
+    }
+    .can-1 {
+      animation: canFloat1 4s ease-in-out infinite;
+    }
+    .can-2 {
+      animation: canFloat2 4.5s ease-in-out 0.5s infinite;
     }
     @keyframes canEntry1 {
       from { opacity: 0; transform: translateY(60px) rotate(-6deg) scale(0.8); }
@@ -179,58 +262,140 @@
       opacity: 0;
     }
   </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "EgoFrutas del Bosque — Bienestar Digestivo Natural",
+        "description": "Apoyo nutricional con extracto de regaliz, vitaminas B y antioxidantes de frutos del bosque.",
+        "url": "https://alvaretto.github.io/egofrutas/",
+        "inLanguage": "es",
+        "publisher": {
+          "@type": "Organization",
+          "name": "OmniLife",
+          "url": "https://www.omnilife.com"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "EgoFrutas del Bosque",
+        "description": "Suplemento nutricional de frutos del bosque con extracto de regaliz, vitaminas del complejo B y antioxidantes naturales.",
+        "image": "https://cdn.omnilife.com/public/uploads/images/products/detail/mex/es_new/4850500/4850500.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "OmniLife"
+        },
+        "category": "Suplementos Nutricionales"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-cream text-gray-800 font-body antialiased">
 
+  <!-- ════════════════════════════════════════════════════════════════════
+       HERO SECTION
+       ════════════════════════════════════════════════════════════════════ -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background image -->
     <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1200&q=80" alt="Frutas frescas y saludables sobre una superficie natural" class="w-full h-full object-cover" loading="eager">
+      <img
+        src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1200&q=80"
+        alt="Frutas frescas y saludables sobre una superficie natural"
+        class="w-full h-full object-cover"
+        loading="eager"
+        fetchpriority="high"
+      >
       <div class="absolute inset-0 bg-gradient-to-b from-berry-900/70 via-berry-800/60 to-moss-900/70"></div>
     </div>
+
+    <!-- Decorative blobs -->
     <div class="absolute top-20 -left-20 w-64 h-64 bg-berry-500/10 blob blur-3xl"></div>
     <div class="absolute bottom-20 -right-20 w-80 h-80 bg-moss-500/10 blob-alt blur-3xl"></div>
 
+    <!-- ── Product Cans (right side) ── -->
     <div class="hidden md:flex absolute right-4 lg:right-12 xl:right-24 top-1/2 -translate-y-1/2 z-10 items-end gap-0" aria-hidden="true">
+      <!-- Glow behind cans -->
       <div class="absolute inset-0 -inset-x-16 bg-berry-500/25 blur-[80px] rounded-full scale-150"></div>
+
+      <!-- Can 1 (back, slightly smaller, rotated) -->
       <div class="can-enter-1 relative -mr-12 lg:-mr-16 mb-6">
-        <img src="https://cdn.omnilife.com/public/uploads/images/products/detail/mex/es_new/4850500/4850500.png" alt="Lata EgoFrutas del Bosque OmniLife" class="w-28 lg:w-36 xl:w-40 drop-shadow-2xl" loading="eager" style="filter: brightness(0.85);">
+        <img
+          src="https://cdn.omnilife.com/public/uploads/images/products/detail/mex/es_new/4850500/4850500.png"
+          alt="Lata EgoFrutas del Bosque OmniLife"
+          class="w-28 lg:w-36 xl:w-40 drop-shadow-2xl"
+          loading="eager"
+          style="filter: brightness(0.85);"
+        >
       </div>
+
+      <!-- Can 2 (front, larger, overlapping) -->
       <div class="can-enter-2 relative z-10">
-        <img src="https://cdn.omnilife.com/public/uploads/images/products/detail/mex/es_new/4850500/4850500.png" alt="Lata EgoFrutas del Bosque OmniLife" class="w-36 lg:w-44 xl:w-52 drop-shadow-2xl" loading="eager">
+        <img
+          src="https://cdn.omnilife.com/public/uploads/images/products/detail/mex/es_new/4850500/4850500.png"
+          alt="Lata EgoFrutas del Bosque OmniLife"
+          class="w-36 lg:w-44 xl:w-52 drop-shadow-2xl"
+          loading="eager"
+        >
       </div>
     </div>
 
+    <!-- Content -->
     <div class="relative z-10 text-center px-6 max-w-3xl mx-auto md:text-left md:ml-[8%] lg:ml-[12%] md:max-w-xl lg:max-w-2xl">
       <div class="hero-animate hero-delay-1 inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-5 py-2 mb-8">
         <i data-lucide="leaf" class="w-4 h-4 text-moss-300"></i>
         <span class="text-white/90 text-sm font-medium tracking-wide">OmniLife — Nutrición Inteligente</span>
       </div>
+
       <h1 class="hero-animate hero-delay-2 font-display text-4xl sm:text-5xl md:text-6xl text-white font-semibold leading-tight mb-6" style="font-variation-settings: 'opsz' 72;">
         Recupera tu bienestar<br>
         <span class="bg-gradient-to-r from-moss-300 to-berry-300 bg-clip-text text-transparent">digestivo hoy mismo</span>
       </h1>
+
       <p class="hero-animate hero-delay-3 text-lg sm:text-xl text-white/80 font-light max-w-xl mx-auto md:mx-0 mb-10 leading-relaxed">
         EgoFrutas del Bosque: apoyo nutricional con frutos del bosque, regaliz y vitaminas B para acompañar tu recuperación digestiva.
       </p>
+
       <div class="hero-animate hero-delay-4 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-        <a href="https://wa.me/573216429931?text=Hola%20%C3%81lvaro%2C%20necesito%20EgoFrutas%20para%20una%20urgencia%20digestiva" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp para pedir EgoFrutas" class="group inline-flex items-center gap-3 bg-moss-600 hover:bg-moss-700 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg shadow-moss-600/30 hover:shadow-xl hover:shadow-moss-600/40 transition-all duration-300">
+        <a
+          href="https://wa.me/573216429931?text=Hola%20%C3%81lvaro%2C%20necesito%20EgoFrutas%20para%20una%20urgencia%20digestiva"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contactar por WhatsApp para pedir EgoFrutas"
+          class="group inline-flex items-center gap-3 bg-moss-600 hover:bg-moss-700 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg shadow-moss-600/30 hover:shadow-xl hover:shadow-moss-600/40 transition-all duration-300"
+        >
           <i data-lucide="message-circle" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
           Pedir por WhatsApp
         </a>
-        <a href="#crisis" aria-label="Saber más sobre EgoFrutas" class="inline-flex items-center gap-2 text-white/70 hover:text-white font-medium transition-colors duration-300">
+        <a
+          href="#crisis"
+          aria-label="Saber más sobre EgoFrutas"
+          class="inline-flex items-center gap-2 text-white/70 hover:text-white font-medium transition-colors duration-300"
+        >
           Saber más
           <i data-lucide="arrow-down" class="w-4 h-4"></i>
         </a>
       </div>
+
+      <!-- Scroll indicator -->
       <div class="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-indicator">
         <i data-lucide="chevrons-down" class="w-6 h-6 text-white/40"></i>
       </div>
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       CRISIS SECTION
+       ════════════════════════════════════════════════════════════════════ -->
   <section id="crisis" class="py-20 sm:py-28 px-6 bg-gradient-to-b from-cream to-white relative">
     <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-berry-200 to-transparent"></div>
+
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16 reveal">
         <span class="inline-block text-berry-600 font-medium text-sm tracking-widest uppercase mb-4">Entendemos cómo te sientes</span>
@@ -241,24 +406,40 @@
           Cuando consumes alimentos en mal estado, tu organismo entra en modo de defensa. Estos son los síntomas más comunes y cómo impactan tu bienestar:
         </p>
       </div>
+
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <!-- Symptom 1 -->
         <div class="reveal reveal-delay-1 card-lift bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-berry-50 flex items-center justify-center mb-4"><i data-lucide="frown" class="w-6 h-6 text-berry-600"></i></div>
+          <div class="w-12 h-12 rounded-xl bg-berry-50 flex items-center justify-center mb-4">
+            <i data-lucide="frown" class="w-6 h-6 text-berry-600"></i>
+          </div>
           <h3 class="font-display text-xl text-gray-900 font-semibold mb-2">Náuseas y vómito</h3>
           <p class="text-gray-600 font-light leading-relaxed">Tu cuerpo intenta expulsar las toxinas, provocando malestar estomacal intenso y deshidratación.</p>
         </div>
+
+        <!-- Symptom 2 -->
         <div class="reveal reveal-delay-2 card-lift bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center mb-4"><i data-lucide="flame" class="w-6 h-6 text-red-500"></i></div>
+          <div class="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center mb-4">
+            <i data-lucide="flame" class="w-6 h-6 text-red-500"></i>
+          </div>
           <h3 class="font-display text-xl text-gray-900 font-semibold mb-2">Cólicos y dolor abdominal</h3>
           <p class="text-gray-600 font-light leading-relaxed">La inflamación del tracto digestivo genera espasmos dolorosos que dificultan la alimentación normal.</p>
         </div>
+
+        <!-- Symptom 3 -->
         <div class="reveal reveal-delay-3 card-lift bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center mb-4"><i data-lucide="battery-low" class="w-6 h-6 text-amber-600"></i></div>
+          <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center mb-4">
+            <i data-lucide="battery-low" class="w-6 h-6 text-amber-600"></i>
+          </div>
           <h3 class="font-display text-xl text-gray-900 font-semibold mb-2">Fatiga extrema</h3>
           <p class="text-gray-600 font-light leading-relaxed">La pérdida de nutrientes y electrolitos deja tu cuerpo sin energía para las funciones básicas.</p>
         </div>
+
+        <!-- Symptom 4 -->
         <div class="reveal reveal-delay-4 card-lift bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-moss-50 flex items-center justify-center mb-4"><i data-lucide="shield-alert" class="w-6 h-6 text-moss-700"></i></div>
+          <div class="w-12 h-12 rounded-xl bg-moss-50 flex items-center justify-center mb-4">
+            <i data-lucide="shield-alert" class="w-6 h-6 text-moss-700"></i>
+          </div>
           <h3 class="font-display text-xl text-gray-900 font-semibold mb-2">Tu hígado bajo presión</h3>
           <p class="text-gray-600 font-light leading-relaxed">El hígado trabaja al máximo para filtrar y neutralizar las toxinas, necesitando apoyo nutricional adicional.</p>
         </div>
@@ -266,59 +447,103 @@
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SOLUTION SECTION
+       ════════════════════════════════════════════════════════════════════ -->
   <section id="solucion" class="py-20 sm:py-28 px-6 bg-white relative overflow-hidden">
+    <!-- Background decoration -->
     <div class="absolute top-40 -right-40 w-96 h-96 bg-berry-100/40 blob blur-3xl"></div>
     <div class="absolute bottom-20 -left-40 w-96 h-96 bg-moss-100/40 blob-alt blur-3xl"></div>
+
     <div class="max-w-5xl mx-auto relative">
       <div class="text-center mb-16 reveal">
         <span class="inline-block text-moss-600 font-medium text-sm tracking-widest uppercase mb-4">La solución natural</span>
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-gray-900 font-semibold mb-6" style="font-variation-settings: 'opsz' 48;">EgoFrutas del Bosque</h2>
-        <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto leading-relaxed">Una fórmula nutricional diseñada para ofrecer apoyo integral a tu sistema digestivo con ingredientes de origen natural.</p>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-gray-900 font-semibold mb-6" style="font-variation-settings: 'opsz' 48;">
+          EgoFrutas del Bosque
+        </h2>
+        <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto leading-relaxed">
+          Una fórmula nutricional diseñada para ofrecer apoyo integral a tu sistema digestivo con ingredientes de origen natural.
+        </p>
       </div>
+
+      <!-- Product visual + benefits -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Benefit 1 -->
         <div class="reveal reveal-delay-1 card-lift group">
           <div class="bg-gradient-to-br from-berry-50 to-purple-50 rounded-3xl p-8 border border-berry-100/50 h-full">
-            <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:shadow-md transition-shadow"><i data-lucide="flower-2" class="w-7 h-7 text-berry-600"></i></div>
+            <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:shadow-md transition-shadow">
+              <i data-lucide="flower-2" class="w-7 h-7 text-berry-600"></i>
+            </div>
             <h3 class="font-display text-xl text-gray-900 font-semibold mb-3">Extracto de Regaliz</h3>
             <p class="text-gray-600 font-light leading-relaxed mb-4">Reconocido por sus propiedades antiinflamatorias naturales que contribuyen a calmar el tracto digestivo irritado.</p>
-            <div class="flex items-center gap-2 text-berry-600 text-sm font-medium"><i data-lucide="check-circle-2" class="w-4 h-4"></i>Antiinflamatorio natural</div>
+            <div class="flex items-center gap-2 text-berry-600 text-sm font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+              Antiinflamatorio natural
+            </div>
           </div>
         </div>
+
+        <!-- Benefit 2 -->
         <div class="reveal reveal-delay-2 card-lift group">
           <div class="bg-gradient-to-br from-moss-50 to-emerald-50 rounded-3xl p-8 border border-moss-100/50 h-full">
-            <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:shadow-md transition-shadow"><i data-lucide="zap" class="w-7 h-7 text-moss-600"></i></div>
+            <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:shadow-md transition-shadow">
+              <i data-lucide="zap" class="w-7 h-7 text-moss-600"></i>
+            </div>
             <h3 class="font-display text-xl text-gray-900 font-semibold mb-3">Vitaminas del Complejo B</h3>
             <p class="text-gray-600 font-light leading-relaxed mb-4">Apoyo fundamental para la producción de energía celular y el metabolismo de nutrientes durante la recuperación.</p>
-            <div class="flex items-center gap-2 text-moss-600 text-sm font-medium"><i data-lucide="check-circle-2" class="w-4 h-4"></i>Energía celular</div>
+            <div class="flex items-center gap-2 text-moss-600 text-sm font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+              Energía celular
+            </div>
           </div>
         </div>
+
+        <!-- Benefit 3 -->
         <div class="reveal reveal-delay-3 card-lift group">
           <div class="bg-gradient-to-br from-purple-50 to-berry-50 rounded-3xl p-8 border border-purple-100/50 h-full">
-            <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:shadow-md transition-shadow"><i data-lucide="shield-check" class="w-7 h-7 text-purple-600"></i></div>
+            <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:shadow-md transition-shadow">
+              <i data-lucide="shield-check" class="w-7 h-7 text-purple-600"></i>
+            </div>
             <h3 class="font-display text-xl text-gray-900 font-semibold mb-3">Antioxidantes del Bosque</h3>
             <p class="text-gray-600 font-light leading-relaxed mb-4">Arándanos, moras y frambuesas aportan antocianinas que contribuyen a la protección celular contra el estrés oxidativo.</p>
-            <div class="flex items-center gap-2 text-purple-600 text-sm font-medium"><i data-lucide="check-circle-2" class="w-4 h-4"></i>Protección celular</div>
+            <div class="flex items-center gap-2 text-purple-600 text-sm font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+              Protección celular
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Serving suggestion -->
       <div class="reveal mt-12 text-center">
         <div class="inline-flex items-center gap-3 bg-gradient-to-r from-berry-50 to-moss-50 rounded-2xl px-8 py-4 border border-berry-100/30">
           <i data-lucide="snowflake" class="w-5 h-5 text-berry-500"></i>
-          <p class="text-gray-700 font-medium"><span class="text-berry-700">Consejo:</span> Disfrútalo bien frío para mayor alivio y mejor absorción</p>
+          <p class="text-gray-700 font-medium">
+            <span class="text-berry-700">Consejo:</span> Disfrútalo bien frío para mayor alivio y mejor absorción
+          </p>
         </div>
       </div>
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       WELLNESS QUIZ
+       ════════════════════════════════════════════════════════════════════ -->
   <section id="quiz" class="py-20 sm:py-28 px-6 bg-gradient-to-b from-white via-berry-50/30 to-white relative">
     <div class="max-w-2xl mx-auto">
       <div class="text-center mb-12 reveal">
         <span class="inline-block text-berry-600 font-medium text-sm tracking-widest uppercase mb-4">Test rápido</span>
-        <h2 class="font-display text-3xl sm:text-4xl text-gray-900 font-semibold mb-4" style="font-variation-settings: 'opsz' 48;">¿Cómo está tu bienestar digestivo?</h2>
+        <h2 class="font-display text-3xl sm:text-4xl text-gray-900 font-semibold mb-4" style="font-variation-settings: 'opsz' 48;">
+          ¿Cómo está tu bienestar digestivo?
+        </h2>
         <p class="text-gray-600 font-light">Responde 3 preguntas sencillas y descubre cómo apoyar tu recuperación.</p>
       </div>
+
       <div class="reveal">
         <div id="quiz-container" class="gradient-border bg-white rounded-3xl p-8 sm:p-10 shadow-lg shadow-berry-100/30">
+          <!-- Progress bar -->
           <div class="mb-8">
             <div class="flex justify-between items-center mb-3">
               <span id="quiz-progress-text" class="text-sm font-medium text-gray-500">Pregunta 1 de 3</span>
@@ -328,52 +553,89 @@
               <div id="quiz-progress-bar" class="progress-fill h-full bg-gradient-to-r from-berry-500 to-moss-500 rounded-full" style="width: 0%"></div>
             </div>
           </div>
+
+          <!-- Question 1 -->
           <div class="quiz-step active" data-step="1">
             <div class="text-center mb-8">
-              <div class="w-16 h-16 rounded-2xl bg-berry-50 flex items-center justify-center mx-auto mb-5"><i data-lucide="cloud-hail" class="w-8 h-8 text-berry-600"></i></div>
+              <div class="w-16 h-16 rounded-2xl bg-berry-50 flex items-center justify-center mx-auto mb-5">
+                <i data-lucide="cloud-hail" class="w-8 h-8 text-berry-600"></i>
+              </div>
               <h3 class="font-display text-2xl text-gray-900 font-semibold mb-2">¿Sientes pesadez después de comer?</h3>
               <p class="text-gray-500 font-light">Esa sensación de estómago cargado e inflamación abdominal.</p>
             </div>
             <div class="flex flex-col sm:flex-row gap-4">
-              <button onclick="quizAnswer(1, true)" class="quiz-option flex-1 py-4 px-6 rounded-2xl border-2 border-berry-200 hover:border-berry-500 hover:bg-berry-50 font-semibold text-gray-700 hover:text-berry-700 text-lg" aria-label="Sí, siento pesadez después de comer">Sí, frecuentemente</button>
-              <button onclick="quizAnswer(1, false)" class="quiz-option flex-1 py-4 px-6 rounded-2xl border-2 border-gray-200 hover:border-moss-500 hover:bg-moss-50 font-semibold text-gray-700 hover:text-moss-700 text-lg" aria-label="No siento pesadez después de comer">No, rara vez</button>
+              <button onclick="quizAnswer(1, true)" class="quiz-option flex-1 py-4 px-6 rounded-2xl border-2 border-berry-200 hover:border-berry-500 hover:bg-berry-50 font-semibold text-gray-700 hover:text-berry-700 text-lg" aria-label="Sí, siento pesadez después de comer">
+                Sí, frecuentemente
+              </button>
+              <button onclick="quizAnswer(1, false)" class="quiz-option flex-1 py-4 px-6 rounded-2xl border-2 border-gray-200 hover:border-moss-500 hover:bg-moss-50 font-semibold text-gray-700 hover:text-moss-700 text-lg" aria-label="No siento pesadez después de comer">
+                No, rara vez
+              </button>
             </div>
           </div>
+
+          <!-- Question 2 -->
           <div class="quiz-step" data-step="2">
             <div class="text-center mb-8">
-              <div class="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mx-auto mb-5"><i data-lucide="thermometer" class="w-8 h-8 text-red-500"></i></div>
+              <div class="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mx-auto mb-5">
+                <i data-lucide="thermometer" class="w-8 h-8 text-red-500"></i>
+              </div>
               <h3 class="font-display text-2xl text-gray-900 font-semibold mb-2">¿Has tenido náuseas o malestar estomacal?</h3>
               <p class="text-gray-500 font-light">Sensación de mareo, ganas de vomitar o incomodidad en el estómago.</p>
             </div>
             <div class="flex flex-col sm:flex-row gap-4">
-              <button onclick="quizAnswer(2, true)" class="quiz-option flex-1 py-4 px-6 rounded-2xl border-2 border-berry-200 hover:border-berry-500 hover:bg-berry-50 font-semibold text-gray-700 hover:text-berry-700 text-lg" aria-label="Sí, he tenido náuseas o malestar">Sí, bastante</button>
-              <button onclick="quizAnswer(2, false)" class="quiz-option flex-1 py-4 px-6 rounded-2xl border-2 border-gray-200 hover:border-moss-500 hover:bg-moss-50 font-semibold text-gray-700 hover:text-moss-700 text-lg" aria-label="No he tenido náuseas ni malestar">No, estoy bien</button>
+              <button onclick="quizAnswer(2, true)" class="quiz-option flex-1 py-4 px-6 rounded-2xl border-2 border-berry-200 hover:border-berry-500 hover:bg-berry-50 font-semibold text-gray-700 hover:text-berry-700 text-lg" aria-label="Sí, he tenido náuseas o malestar">
+                Sí, bastante
+              </button>
+              <button onclick="quizAnswer(2, false)" class="quiz-option flex-1 py-4 px-6 rounded-2xl border-2 border-gray-200 hover:border-moss-500 hover:bg-moss-50 font-semibold text-gray-700 hover:text-moss-700 text-lg" aria-label="No he tenido náuseas ni malestar">
+                No, estoy bien
+              </button>
             </div>
           </div>
+
+          <!-- Question 3 -->
           <div class="quiz-step" data-step="3">
             <div class="text-center mb-8">
-              <div class="w-16 h-16 rounded-2xl bg-amber-50 flex items-center justify-center mx-auto mb-5"><i data-lucide="moon" class="w-8 h-8 text-amber-500"></i></div>
+              <div class="w-16 h-16 rounded-2xl bg-amber-50 flex items-center justify-center mx-auto mb-5">
+                <i data-lucide="moon" class="w-8 h-8 text-amber-500"></i>
+              </div>
               <h3 class="font-display text-2xl text-gray-900 font-semibold mb-2">¿Sientes falta de energía o fatiga?</h3>
               <p class="text-gray-500 font-light">Cansancio que no se quita con descanso, sin ánimo para actividades básicas.</p>
             </div>
             <div class="flex flex-col sm:flex-row gap-4">
-              <button onclick="quizAnswer(3, true)" class="quiz-option flex-1 py-4 px-6 rounded-2xl border-2 border-berry-200 hover:border-berry-500 hover:bg-berry-50 font-semibold text-gray-700 hover:text-berry-700 text-lg" aria-label="Sí, siento fatiga">Sí, mucha fatiga</button>
-              <button onclick="quizAnswer(3, false)" class="quiz-option flex-1 py-4 px-6 rounded-2xl border-2 border-gray-200 hover:border-moss-500 hover:bg-moss-50 font-semibold text-gray-700 hover:text-moss-700 text-lg" aria-label="No siento fatiga">No, tengo energía</button>
+              <button onclick="quizAnswer(3, true)" class="quiz-option flex-1 py-4 px-6 rounded-2xl border-2 border-berry-200 hover:border-berry-500 hover:bg-berry-50 font-semibold text-gray-700 hover:text-berry-700 text-lg" aria-label="Sí, siento fatiga">
+                Sí, mucha fatiga
+              </button>
+              <button onclick="quizAnswer(3, false)" class="quiz-option flex-1 py-4 px-6 rounded-2xl border-2 border-gray-200 hover:border-moss-500 hover:bg-moss-50 font-semibold text-gray-700 hover:text-moss-700 text-lg" aria-label="No siento fatiga">
+                No, tengo energía
+              </button>
             </div>
           </div>
+
+          <!-- Result -->
           <div class="quiz-step" data-step="result">
             <div class="text-center">
-              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-berry-100 to-moss-100 flex items-center justify-center mx-auto mb-6"><i data-lucide="heart-pulse" class="w-10 h-10 text-berry-600"></i></div>
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-berry-100 to-moss-100 flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="heart-pulse" class="w-10 h-10 text-berry-600"></i>
+              </div>
               <h3 id="quiz-result-title" class="font-display text-2xl text-gray-900 font-semibold mb-3"></h3>
               <p id="quiz-result-text" class="text-gray-600 font-light leading-relaxed mb-6"></p>
               <div class="bg-gradient-to-r from-berry-50 to-moss-50 rounded-2xl p-6 mb-6 border border-berry-100/30">
                 <div class="flex items-start gap-3">
                   <i data-lucide="snowflake" class="w-5 h-5 text-berry-500 mt-0.5 shrink-0"></i>
-                  <p class="text-gray-700 text-left"><strong class="text-berry-700">Recomendación:</strong> Consume EgoFrutas del Bosque <strong>bien frío</strong>, 2 veces al día para apoyar tu recuperación. El frío ayuda a calmar el estómago y mejora la absorción de nutrientes.</p>
+                  <p class="text-gray-700 text-left">
+                    <strong class="text-berry-700">Recomendación:</strong> Consume EgoFrutas del Bosque <strong>bien frío</strong>, 2 veces al día para apoyar tu recuperación. El frío ayuda a calmar el estómago y mejora la absorción de nutrientes.
+                  </p>
                 </div>
               </div>
-              <a href="https://wa.me/573216429931?text=Hola%20%C3%81lvaro%2C%20necesito%20EgoFrutas%20para%20una%20urgencia%20digestiva" target="_blank" rel="noopener noreferrer" aria-label="Pedir EgoFrutas por WhatsApp" class="inline-flex items-center gap-3 bg-moss-600 hover:bg-moss-700 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg shadow-moss-600/20 hover:shadow-xl transition-all duration-300">
-                <i data-lucide="message-circle" class="w-5 h-5"></i>Pedir mi EgoFrutas ahora
+              <a
+                href="https://wa.me/573216429931?text=Hola%20%C3%81lvaro%2C%20necesito%20EgoFrutas%20para%20una%20urgencia%20digestiva"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pedir EgoFrutas por WhatsApp"
+                class="inline-flex items-center gap-3 bg-moss-600 hover:bg-moss-700 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg shadow-moss-600/20 hover:shadow-xl transition-all duration-300"
+              >
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                Pedir mi EgoFrutas ahora
               </a>
             </div>
           </div>
@@ -382,165 +644,410 @@
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       LIVER DETOX INFOGRAPHIC
+       ════════════════════════════════════════════════════════════════════ -->
   <section id="higado" class="py-20 sm:py-28 px-6 bg-gradient-to-b from-white to-cream relative overflow-hidden">
     <div class="absolute top-0 right-0 w-72 h-72 bg-moss-100/50 blob blur-3xl"></div>
+
     <div class="max-w-3xl mx-auto relative">
       <div class="text-center mb-16 reveal">
         <span class="inline-block text-moss-600 font-medium text-sm tracking-widest uppercase mb-4">Ciencia simplificada</span>
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-gray-900 font-semibold mb-6" style="font-variation-settings: 'opsz' 48;">Cómo funciona en tu hígado</h2>
-        <p class="text-lg text-gray-600 font-light max-w-xl mx-auto leading-relaxed">Tu hígado es tu principal órgano de desintoxicación. Así es como EgoFrutas contribuye a apoyar su función:</p>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-gray-900 font-semibold mb-6" style="font-variation-settings: 'opsz' 48;">
+          Cómo funciona en tu hígado
+        </h2>
+        <p class="text-lg text-gray-600 font-light max-w-xl mx-auto leading-relaxed">
+          Tu hígado es tu principal órgano de desintoxicación. Así es como EgoFrutas contribuye a apoyar su función:
+        </p>
       </div>
+
+      <!-- Flow steps -->
       <div class="relative">
+        <!-- Connector line -->
         <div class="absolute left-8 sm:left-10 top-0 bottom-0 flow-connector hidden sm:block" aria-hidden="true"></div>
+
+        <!-- Step 1 -->
         <div class="reveal reveal-delay-1 flex gap-6 sm:gap-8 mb-10">
-          <div class="shrink-0 relative z-10"><div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-red-100 border-4 border-white shadow-md flex items-center justify-center"><i data-lucide="alert-triangle" class="w-7 h-7 sm:w-8 sm:h-8 text-red-600"></i></div></div>
-          <div class="pt-2"><div class="text-xs font-semibold text-red-500 uppercase tracking-widest mb-1">Paso 1</div><h3 class="font-display text-xl sm:text-2xl text-gray-900 font-semibold mb-2">Las toxinas ingresan</h3><p class="text-gray-600 font-light leading-relaxed">Bacterias y toxinas de alimentos contaminados llegan al torrente sanguíneo a través del intestino, generando una respuesta inflamatoria en todo el cuerpo.</p></div>
+          <div class="shrink-0 relative z-10">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-red-100 border-4 border-white shadow-md flex items-center justify-center">
+              <i data-lucide="alert-triangle" class="w-7 h-7 sm:w-8 sm:h-8 text-red-600"></i>
+            </div>
+          </div>
+          <div class="pt-2">
+            <div class="text-xs font-semibold text-red-500 uppercase tracking-widest mb-1">Paso 1</div>
+            <h3 class="font-display text-xl sm:text-2xl text-gray-900 font-semibold mb-2">Las toxinas ingresan</h3>
+            <p class="text-gray-600 font-light leading-relaxed">Bacterias y toxinas de alimentos contaminados llegan al torrente sanguíneo a través del intestino, generando una respuesta inflamatoria en todo el cuerpo.</p>
+          </div>
         </div>
+
+        <!-- Step 2 -->
         <div class="reveal reveal-delay-2 flex gap-6 sm:gap-8 mb-10">
-          <div class="shrink-0 relative z-10"><div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-amber-100 border-4 border-white shadow-md flex items-center justify-center"><i data-lucide="activity" class="w-7 h-7 sm:w-8 sm:h-8 text-amber-600"></i></div></div>
-          <div class="pt-2"><div class="text-xs font-semibold text-amber-500 uppercase tracking-widest mb-1">Paso 2</div><h3 class="font-display text-xl sm:text-2xl text-gray-900 font-semibold mb-2">El hígado trabaja al máximo</h3><p class="text-gray-600 font-light leading-relaxed">Tu hígado activa sus enzimas de Fase I y Fase II para neutralizar y eliminar las sustancias dañinas, un proceso que consume grandes cantidades de nutrientes y energía.</p></div>
+          <div class="shrink-0 relative z-10">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-amber-100 border-4 border-white shadow-md flex items-center justify-center">
+              <i data-lucide="activity" class="w-7 h-7 sm:w-8 sm:h-8 text-amber-600"></i>
+            </div>
+          </div>
+          <div class="pt-2">
+            <div class="text-xs font-semibold text-amber-500 uppercase tracking-widest mb-1">Paso 2</div>
+            <h3 class="font-display text-xl sm:text-2xl text-gray-900 font-semibold mb-2">El hígado trabaja al máximo</h3>
+            <p class="text-gray-600 font-light leading-relaxed">Tu hígado activa sus enzimas de Fase I y Fase II para neutralizar y eliminar las sustancias dañinas, un proceso que consume grandes cantidades de nutrientes y energía.</p>
+          </div>
         </div>
+
+        <!-- Step 3 -->
         <div class="reveal reveal-delay-3 flex gap-6 sm:gap-8 mb-10">
-          <div class="shrink-0 relative z-10"><div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-berry-100 border-4 border-white shadow-md flex items-center justify-center"><i data-lucide="droplets" class="w-7 h-7 sm:w-8 sm:h-8 text-berry-600"></i></div></div>
-          <div class="pt-2"><div class="text-xs font-semibold text-berry-500 uppercase tracking-widest mb-1">Paso 3</div><h3 class="font-display text-xl sm:text-2xl text-gray-900 font-semibold mb-2">EgoFrutas aporta refuerzo</h3><p class="text-gray-600 font-light leading-relaxed">El extracto de regaliz contribuye a calmar la inflamación, las vitaminas B apoyan la producción de energía celular, y los antioxidantes de frutos del bosque ayudan a neutralizar radicales libres.</p></div>
+          <div class="shrink-0 relative z-10">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-berry-100 border-4 border-white shadow-md flex items-center justify-center">
+              <i data-lucide="droplets" class="w-7 h-7 sm:w-8 sm:h-8 text-berry-600"></i>
+            </div>
+          </div>
+          <div class="pt-2">
+            <div class="text-xs font-semibold text-berry-500 uppercase tracking-widest mb-1">Paso 3</div>
+            <h3 class="font-display text-xl sm:text-2xl text-gray-900 font-semibold mb-2">EgoFrutas aporta refuerzo</h3>
+            <p class="text-gray-600 font-light leading-relaxed">El extracto de regaliz contribuye a calmar la inflamación, las vitaminas B apoyan la producción de energía celular, y los antioxidantes de frutos del bosque ayudan a neutralizar radicales libres.</p>
+          </div>
         </div>
+
+        <!-- Step 4 -->
         <div class="reveal reveal-delay-4 flex gap-6 sm:gap-8">
-          <div class="shrink-0 relative z-10"><div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-moss-100 border-4 border-white shadow-md flex items-center justify-center"><i data-lucide="sun" class="w-7 h-7 sm:w-8 sm:h-8 text-moss-600"></i></div></div>
-          <div class="pt-2"><div class="text-xs font-semibold text-moss-500 uppercase tracking-widest mb-1">Paso 4</div><h3 class="font-display text-xl sm:text-2xl text-gray-900 font-semibold mb-2">Camino a la recuperación</h3><p class="text-gray-600 font-light leading-relaxed">Con el apoyo nutricional adecuado, tu cuerpo puede enfocarse en restaurar el equilibrio digestivo y recuperar la vitalidad. Una buena nutrición marca la diferencia.</p></div>
+          <div class="shrink-0 relative z-10">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-moss-100 border-4 border-white shadow-md flex items-center justify-center">
+              <i data-lucide="sun" class="w-7 h-7 sm:w-8 sm:h-8 text-moss-600"></i>
+            </div>
+          </div>
+          <div class="pt-2">
+            <div class="text-xs font-semibold text-moss-500 uppercase tracking-widest mb-1">Paso 4</div>
+            <h3 class="font-display text-xl sm:text-2xl text-gray-900 font-semibold mb-2">Camino a la recuperación</h3>
+            <p class="text-gray-600 font-light leading-relaxed">Con el apoyo nutricional adecuado, tu cuerpo puede enfocarse en restaurar el equilibrio digestivo y recuperar la vitalidad. Una buena nutrición marca la diferencia.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       BERRY IMAGE BREAK
+       ════════════════════════════════════════════════════════════════════ -->
   <section class="relative h-64 sm:h-80 overflow-hidden" aria-hidden="true">
-    <img src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=1200&q=80" alt="Frutos del bosque frescos: arándanos, moras y frambuesas" class="w-full h-full object-cover" loading="lazy">
+    <img
+      src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=1200&q=80"
+      alt="Frutos del bosque frescos: arándanos, moras y frambuesas"
+      class="w-full h-full object-cover"
+      loading="lazy"
+    >
     <div class="absolute inset-0 bg-gradient-to-r from-berry-900/40 via-transparent to-moss-900/40"></div>
     <div class="absolute inset-0 flex items-center justify-center">
-      <p class="font-display text-3xl sm:text-4xl text-white font-semibold text-center px-6 drop-shadow-lg" style="font-variation-settings: 'opsz' 48;">El poder natural de los frutos del bosque</p>
+      <p class="font-display text-3xl sm:text-4xl text-white font-semibold text-center px-6 drop-shadow-lg" style="font-variation-settings: 'opsz' 48;">
+        El poder natural de los frutos del bosque
+      </p>
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       TESTIMONIALS
+       ════════════════════════════════════════════════════════════════════ -->
   <section id="testimonios" class="py-20 sm:py-28 px-6 bg-cream relative">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16 reveal">
         <span class="inline-block text-berry-600 font-medium text-sm tracking-widest uppercase mb-4">Experiencias reales</span>
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-gray-900 font-semibold mb-6" style="font-variation-settings: 'opsz' 48;">Lo que cuentan quienes lo han probado</h2>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-gray-900 font-semibold mb-6" style="font-variation-settings: 'opsz' 48;">
+          Lo que cuentan quienes lo han probado
+        </h2>
       </div>
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
         <div class="reveal reveal-delay-1 card-lift bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
-          <div class="flex gap-1 mb-4" aria-label="5 estrellas de calificación"><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i></div>
+          <div class="flex gap-1 mb-4" aria-label="5 estrellas de calificación">
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+          </div>
           <p class="text-gray-600 font-light leading-relaxed mb-6 italic">"Después de una intoxicación con mariscos, estuve 3 días sin poder comer. Mi vecina me recomendó EgoFrutas bien frío y desde el primer vaso sentí que mi estómago se calmaba. En dos días ya comía con normalidad."</p>
-          <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-berry-100 flex items-center justify-center"><span class="font-display font-semibold text-berry-700">M</span></div><div><p class="font-semibold text-gray-900 text-sm">María C.</p><p class="text-gray-500 text-xs">Bogotá, Colombia</p></div></div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-berry-100 flex items-center justify-center">
+              <span class="font-display font-semibold text-berry-700">M</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">María C.</p>
+              <p class="text-gray-500 text-xs">Bogotá, Colombia</p>
+            </div>
+          </div>
         </div>
+
+        <!-- Testimonial 2 -->
         <div class="reveal reveal-delay-2 card-lift bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
-          <div class="flex gap-1 mb-4" aria-label="5 estrellas de calificación"><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i></div>
+          <div class="flex gap-1 mb-4" aria-label="5 estrellas de calificación">
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+          </div>
           <p class="text-gray-600 font-light leading-relaxed mb-6 italic">"Trabajo en la calle y a veces la comida me cae mal. Desde que tengo EgoFrutas en la nevera, es lo primero que tomo cuando siento el estómago revuelto. Me ayuda a sentirme mejor más rápido."</p>
-          <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-moss-100 flex items-center justify-center"><span class="font-display font-semibold text-moss-700">C</span></div><div><p class="font-semibold text-gray-900 text-sm">Carlos R.</p><p class="text-gray-500 text-xs">Medellín, Colombia</p></div></div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-moss-100 flex items-center justify-center">
+              <span class="font-display font-semibold text-moss-700">C</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Carlos R.</p>
+              <p class="text-gray-500 text-xs">Medellín, Colombia</p>
+            </div>
+          </div>
         </div>
+
+        <!-- Testimonial 3 -->
         <div class="reveal reveal-delay-3 card-lift bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
-          <div class="flex gap-1 mb-4" aria-label="5 estrellas de calificación"><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i><i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i></div>
+          <div class="flex gap-1 mb-4" aria-label="5 estrellas de calificación">
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 star-filled fill-current"></i>
+          </div>
           <p class="text-gray-600 font-light leading-relaxed mb-6 italic">"Mi hija tuvo una intoxicación fuerte y el pediatra nos dijo que le diéramos líquidos con nutrientes. Le di EgoFrutas frío durante 3 días y la recuperación fue notable. Ahora siempre tengo uno de reserva."</p>
-          <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center"><span class="font-display font-semibold text-purple-700">A</span></div><div><p class="font-semibold text-gray-900 text-sm">Ana L.</p><p class="text-gray-500 text-xs">Cali, Colombia</p></div></div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
+              <span class="font-display font-semibold text-purple-700">A</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Ana L.</p>
+              <p class="text-gray-500 text-xs">Cali, Colombia</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       FINAL CTA + CONTACT
+       ════════════════════════════════════════════════════════════════════ -->
   <section id="contacto" class="py-20 sm:py-28 px-6 bg-gradient-to-b from-berry-900 to-berry-950 relative overflow-hidden">
+    <!-- Decorative -->
     <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-berry-400/30 to-transparent"></div>
     <div class="absolute top-20 -left-32 w-64 h-64 bg-berry-600/20 blob blur-3xl"></div>
     <div class="absolute bottom-20 -right-32 w-80 h-80 bg-moss-600/10 blob-alt blur-3xl"></div>
+
     <div class="max-w-3xl mx-auto text-center relative">
       <div class="reveal">
-        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2 mb-8"><i data-lucide="heart" class="w-4 h-4 text-berry-300"></i><span class="text-white/80 text-sm font-medium">Tu bienestar es nuestra prioridad</span></div>
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white font-semibold mb-6" style="font-variation-settings: 'opsz' 48;">No esperes más para<br><span class="bg-gradient-to-r from-moss-300 to-berry-300 bg-clip-text text-transparent">sentirte mejor</span></h2>
-        <p class="text-lg text-white/70 font-light max-w-xl mx-auto leading-relaxed mb-10">Contacta directamente a tu distribuidor autorizado. Atención personalizada y entrega rápida para que inicies tu recuperación hoy.</p>
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2 mb-8">
+          <i data-lucide="heart" class="w-4 h-4 text-berry-300"></i>
+          <span class="text-white/80 text-sm font-medium">Tu bienestar es nuestra prioridad</span>
+        </div>
+
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white font-semibold mb-6" style="font-variation-settings: 'opsz' 48;">
+          No esperes más para<br>
+          <span class="bg-gradient-to-r from-moss-300 to-berry-300 bg-clip-text text-transparent">sentirte mejor</span>
+        </h2>
+
+        <p class="text-lg text-white/70 font-light max-w-xl mx-auto leading-relaxed mb-10">
+          Contacta directamente a tu distribuidor autorizado. Atención personalizada y entrega rápida para que inicies tu recuperación hoy.
+        </p>
       </div>
+
+      <!-- Product image -->
       <div class="reveal reveal-delay-1 mb-10">
         <div class="relative inline-block">
           <div class="absolute inset-0 bg-moss-500/20 blur-[60px] rounded-full scale-110"></div>
-          <img src="https://cdn.omnilife.com/public/uploads/images/products/detail/mex/es_new/4850500/4850500.png" alt="EgoFrutas del Bosque OmniLife — Six pack de latas" class="relative w-48 sm:w-56 md:w-64 mx-auto drop-shadow-2xl" loading="lazy">
+          <img
+            src="https://cdn.omnilife.com/public/uploads/images/products/detail/mex/es_new/4850500/4850500.png"
+            alt="EgoFrutas del Bosque OmniLife — Six pack de latas"
+            class="relative w-48 sm:w-56 md:w-64 mx-auto drop-shadow-2xl"
+            loading="lazy"
+          >
         </div>
       </div>
+
+      <!-- Contact card -->
       <div class="reveal reveal-delay-1">
         <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-3xl p-8 sm:p-10 mb-8">
           <div class="flex items-center justify-center gap-4 mb-6">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-moss-500 to-moss-600 flex items-center justify-center shadow-lg"><i data-lucide="user-check" class="w-8 h-8 text-white"></i></div>
-            <div class="text-left"><p class="text-white font-display text-xl font-semibold">Álvaro Ángel Molina</p><p class="text-white/60 text-sm">Distribuidor Autorizado OmniLife</p></div>
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-moss-500 to-moss-600 flex items-center justify-center shadow-lg">
+              <i data-lucide="user-check" class="w-8 h-8 text-white"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-white font-display text-xl font-semibold">Álvaro Ángel Molina</p>
+              <p class="text-white/60 text-sm">Distribuidor Autorizado OmniLife</p>
+            </div>
           </div>
+
           <div class="flex flex-col sm:flex-row items-center gap-4 justify-center">
-            <a href="https://wa.me/573216429931?text=Hola%20%C3%81lvaro%2C%20necesito%20EgoFrutas%20para%20una%20urgencia%20digestiva" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensaje de WhatsApp a Álvaro para pedir EgoFrutas" class="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-moss-600 hover:bg-moss-500 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg shadow-moss-900/30 hover:shadow-xl transition-all duration-300">
+            <a
+              href="https://wa.me/573216429931?text=Hola%20%C3%81lvaro%2C%20necesito%20EgoFrutas%20para%20una%20urgencia%20digestiva"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enviar mensaje de WhatsApp a Álvaro para pedir EgoFrutas"
+              class="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-moss-600 hover:bg-moss-500 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg shadow-moss-900/30 hover:shadow-xl transition-all duration-300"
+            >
               <svg class="w-6 h-6 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               321 642 9931
             </a>
-            <a href="tel:+573216429931" aria-label="Llamar a Álvaro al 321 642 9931" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-2xl border border-white/10 transition-all duration-300">
-              <i data-lucide="phone" class="w-5 h-5"></i>Llamar ahora
+            <a
+              href="tel:+573216429931"
+              aria-label="Llamar a Álvaro al 321 642 9931"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-2xl border border-white/10 transition-all duration-300"
+            >
+              <i data-lucide="phone" class="w-5 h-5"></i>
+              Llamar ahora
             </a>
           </div>
         </div>
       </div>
+
       <p class="reveal reveal-delay-2 text-white/30 text-xs">Neiva, Huila — Envíos a todo Colombia</p>
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════════════════════ -->
   <footer class="bg-berry-950 py-10 px-6 border-t border-berry-800/50">
     <div class="max-w-4xl mx-auto text-center">
-      <div class="flex items-center justify-center gap-2 mb-4"><i data-lucide="leaf" class="w-5 h-5 text-moss-500"></i><span class="font-display text-lg text-white/80 font-semibold">EgoFrutas del Bosque</span></div>
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <i data-lucide="leaf" class="w-5 h-5 text-moss-500"></i>
+        <span class="font-display text-lg text-white/80 font-semibold">EgoFrutas del Bosque</span>
+      </div>
       <p class="text-white/40 text-sm mb-3">OmniLife — Nutrición para tu bienestar</p>
       <div class="bg-white/5 rounded-xl px-5 py-3 inline-block mb-4">
-        <p class="text-white/50 text-xs leading-relaxed"><i data-lucide="info" class="w-3 h-3 inline-block mr-1 align-text-top"></i><strong>Aviso:</strong> Este producto no es un medicamento. No pretende diagnosticar, tratar, curar ni prevenir ninguna enfermedad. Consulte a su médico ante cualquier problema de salud.</p>
+        <p class="text-white/50 text-xs leading-relaxed">
+          <i data-lucide="info" class="w-3 h-3 inline-block mr-1 align-text-top"></i>
+          <strong>Aviso:</strong> Este producto no es un medicamento. No pretende diagnosticar, tratar, curar ni prevenir ninguna enfermedad. Consulte a su médico ante cualquier problema de salud.
+        </p>
       </div>
       <p class="text-white/20 text-xs">&copy; 2026 — Distribuido por Álvaro Ángel Molina</p>
     </div>
   </footer>
 
-  <a id="wa-float" href="https://wa.me/573216429931?text=Hola%20%C3%81lvaro%2C%20necesito%20EgoFrutas%20para%20una%20urgencia%20digestiva" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" class="wa-float fixed bottom-6 right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg shadow-green-600/30 hover:shadow-xl hover:shadow-green-600/40 transition-all duration-300" style="opacity: 0; pointer-events: none; transition: opacity 0.4s ease;">
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       FLOATING WHATSAPP BUTTON
+       ════════════════════════════════════════════════════════════════════ -->
+  <a
+    id="wa-float"
+    href="https://wa.me/573216429931?text=Hola%20%C3%81lvaro%2C%20necesito%20EgoFrutas%20para%20una%20urgencia%20digestiva"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+    class="wa-float fixed bottom-6 right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg shadow-green-600/30 hover:shadow-xl hover:shadow-green-600/40 transition-all duration-300"
+    style="opacity: 0; pointer-events: none; transition: opacity 0.4s ease;"
+  >
     <svg class="w-7 h-7 sm:w-8 sm:h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SCRIPTS
+       ════════════════════════════════════════════════════════════════════ -->
   <script>
+    // ── Initialize Lucide Icons ──
     lucide.createIcons();
+
+    // ── Scroll-triggered reveal animations ──
     const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ── Floating WhatsApp button: show after scrolling past hero ──
     const waFloat = document.getElementById('wa-float');
     const heroSection = document.getElementById('hero');
+
     const waObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (!entry.isIntersecting) { waFloat.style.opacity = '1'; waFloat.style.pointerEvents = 'auto'; }
-        else { waFloat.style.opacity = '0'; waFloat.style.pointerEvents = 'none'; }
+        if (!entry.isIntersecting) {
+          waFloat.style.opacity = '1';
+          waFloat.style.pointerEvents = 'auto';
+        } else {
+          waFloat.style.opacity = '0';
+          waFloat.style.pointerEvents = 'none';
+        }
       });
     }, { threshold: 0.3 });
+
     waObserver.observe(heroSection);
+
+    // ── Quiz Logic ──
     let quizScore = 0;
+    let currentStep = 1;
     const totalQuestions = 3;
+
     function quizAnswer(step, isYes) {
       if (isYes) quizScore++;
-      document.querySelector(`.quiz-step[data-step="${step}"]`).classList.remove('active');
+
+      const currentEl = document.querySelector(`.quiz-step[data-step="${step}"]`);
+      currentEl.classList.remove('active');
+
       if (step < totalQuestions) {
-        const ns = step + 1;
-        setTimeout(() => { document.querySelector(`.quiz-step[data-step="${ns}"]`).classList.add('active'); updateProgress(ns); }, 150);
-      } else { setTimeout(() => { showResult(); }, 150); }
+        const nextStep = step + 1;
+        const nextEl = document.querySelector(`.quiz-step[data-step="${nextStep}"]`);
+
+        // Small delay for transition effect
+        setTimeout(() => {
+          nextEl.classList.add('active');
+          updateProgress(nextStep);
+        }, 150);
+      } else {
+        // Show result
+        setTimeout(() => {
+          showResult();
+        }, 150);
+      }
     }
+
     function updateProgress(step) {
       const pct = Math.round(((step - 1) / totalQuestions) * 100);
       document.getElementById('quiz-progress-bar').style.width = pct + '%';
       document.getElementById('quiz-progress-text').textContent = `Pregunta ${step} de ${totalQuestions}`;
       document.getElementById('quiz-progress-pct').textContent = pct + '%';
     }
+
     function showResult() {
+      // Full progress bar
       document.getElementById('quiz-progress-bar').style.width = '100%';
       document.getElementById('quiz-progress-text').textContent = 'Resultado';
       document.getElementById('quiz-progress-pct').textContent = '100%';
-      const t = document.getElementById('quiz-result-title'), x = document.getElementById('quiz-result-text');
-      if (quizScore === 3) { t.textContent = 'Tu cuerpo necesita apoyo urgente'; x.textContent = 'Todos los indicadores sugieren que tu sistema digestivo está bajo estrés significativo. Es importante que le brindes el apoyo nutricional adecuado para facilitar tu recuperación.'; }
-      else if (quizScore === 2) { t.textContent = 'Tu digestión necesita atención'; x.textContent = 'Presentas varios síntomas que indican que tu sistema digestivo no está funcionando de forma óptima. Un refuerzo nutricional puede contribuir a tu bienestar.'; }
-      else if (quizScore === 1) { t.textContent = 'Un poco de apoyo puede ayudar'; x.textContent = 'Aunque algunos de tus indicadores son positivos, hay señales de que podrías beneficiarte de un apoyo nutricional para mantener tu bienestar digestivo.'; }
-      else { t.textContent = '¡Tu digestión parece estar bien!'; x.textContent = 'Tus indicadores son positivos. Aun así, mantener una buena nutrición es clave para la prevención. EgoFrutas del Bosque puede ser un complemento ideal para tu día a día.'; }
-      document.querySelector('.quiz-step[data-step="result"]').classList.add('active');
+
+      const resultEl = document.querySelector('.quiz-step[data-step="result"]');
+      const titleEl = document.getElementById('quiz-result-title');
+      const textEl = document.getElementById('quiz-result-text');
+
+      if (quizScore === 3) {
+        titleEl.textContent = 'Tu cuerpo necesita apoyo urgente';
+        textEl.textContent = 'Todos los indicadores sugieren que tu sistema digestivo está bajo estrés significativo. Es importante que le brindes el apoyo nutricional adecuado para facilitar tu recuperación.';
+      } else if (quizScore === 2) {
+        titleEl.textContent = 'Tu digestión necesita atención';
+        textEl.textContent = 'Presentas varios síntomas que indican que tu sistema digestivo no está funcionando de forma óptima. Un refuerzo nutricional puede contribuir a tu bienestar.';
+      } else if (quizScore === 1) {
+        titleEl.textContent = 'Un poco de apoyo puede ayudar';
+        textEl.textContent = 'Aunque algunos de tus indicadores son positivos, hay señales de que podrías beneficiarte de un apoyo nutricional para mantener tu bienestar digestivo.';
+      } else {
+        titleEl.textContent = '¡Tu digestión parece estar bien!';
+        textEl.textContent = 'Tus indicadores son positivos. Aun así, mantener una buena nutrición es clave para la prevención. EgoFrutas del Bosque puede ser un complemento ideal para tu día a día.';
+      }
+
+      resultEl.classList.add('active');
+
+      // Re-init lucide icons for the result section
       lucide.createIcons();
     }
   </script>
+
 </body>
 </html>
